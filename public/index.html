@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./img/icon_black.ico" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="./img/icon.png" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+
+    <style>
+        :root { font: 2ch/1 Consolas }
+    </style>
+    <title>FilmJournal</title>
+</head>
+
+<body>   
+    <input id="search" placeholder="Find a movie/show...">
+    <div id="sidebar">
+        <ul>
+            <img id="logo" src="./img/logo.png">
+            <div id="middle">
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-binoculars"></i></span>
+                        <span class="text">Discover</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="favourites.html">
+                        <span class="icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="text">Favourites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="watchlist.html">
+                        <span class="icon"><ion-icon name="bookmarks"></ion-icon></span>
+                        <span class="text">Watchlist</span>
+                    </a>
+                </li>
+            </div>
+            <div id="bottom">
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span id="user-button" class="text"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="logout" href="login.html">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <div id="header">
+        <h2></h2>
+        <div id="filter">
+            <i class="fa-solid fa-filter" style="color: #a2a2b4;"></i>
+            <button id="active">All</button>
+            <button>Movies</button>
+            <button>Shows</button>
+        </div>
+        <button id="return"><ion-icon name="return-up-back-outline"></ion-icon> Return</button>
+    </div>
+    <div id="grid-container"></div>
+    <script type="module" src="script/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

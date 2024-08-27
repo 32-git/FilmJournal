@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./img/icon_black.ico" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="./img/icon.png" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { font: 2ch/1 Consolas }
+    </style>
+    <link rel="stylesheet" href="style/watchlist.css">
+    <title>FilmJournal</title>
+</head>
+
+<body>   
+    <div id="sidebar">
+        <ul>
+            <img id="logo" src="./img/logo.png">
+            <div id="middle">
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fa-solid fa-binoculars"></i></span>
+                        <span class="text">Discover</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="favourites.html">
+                        <span class="icon"><i class="fa-solid fa-heart"></i></span>
+                        <span class="text">Favourites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="watchlist.html">
+                        <span class="icon"><ion-icon name="bookmarks"></ion-icon></span>
+                        <span class="text">Watchlist</span>
+                    </a>
+                </li>
+            </div>
+            <div id="bottom">
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span id="user-button" class="text"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="logout" href="login.html">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <div id="grid-container">
+        <h1>Your Watchlist</h1>
+        <button id="sort-button" data-state="normal"><ion-icon name="move-sharp" style="padding-left: 5px; padding-right: 10px;"></ion-icon>Sort</button>
+        <h2>Movies</h2>
+        <div id="movie-wrapper"></div>
+        <h2>Series</h2>
+        <div id="series-wrapper"></div>
+    </div>
+    <script type="module" src="script/watchlist.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
