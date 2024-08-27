@@ -1,0 +1,255 @@
+body {
+  background: #1f2024;
+  background-attachment: fixed;
+}
+
+#search {
+  position: sticky;
+  background: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  height: 30px;
+  left: 10%;
+  border-width: 0 0 2.5px;
+  border-color: rgb(173, 173, 173);
+  padding-bottom: 5px;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+
+#search:focus { outline: none; }
+
+/* sidebar styling */
+#sidebar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 70px;
+  min-height: 100vh;
+  background: rgb(54, 54, 54);
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+#sidebar:hover {
+  width: 300px;
+  z-index: 1;
+}
+
+#sidebar ul {
+  position: relative;
+  height: 100vh;
+  padding: 0px;
+  width: 100%;
+}
+
+li { list-style: none; }
+
+li:hover { background-color: #535353; }
+
+li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+#logo {
+  position: relative;
+  display: flex;
+  height: 41px;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  min-height: 70px;
+  font-size: 1.5em;
+  color: #bdbdbd;
+  padding-left: 1.5px;
+}
+
+.text {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #bdbdbd;
+}
+
+#middle {
+  position: absolute;
+  top: calc((90% - 210px)/2);
+  width: 100%;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 2.5%;
+  border-top: 2px #535353 solid;
+  width: 100%;
+}
+/* ---------------------------------------------- */
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  width: 90%;
+  margin-right: 60px;
+  float: right;
+  gap: 35px;
+  justify-content: center;
+}
+
+#header {
+  display: block;
+  align-content: middle;
+  margin-left: 8%;
+  padding-top: 42px;
+  margin-bottom: 2.5%;
+}
+
+h2 {
+  display: inline;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 27px;
+}
+
+#return {
+  visibility: hidden;
+  transform: translate(0, -20%);
+  border: solid 7px #535353;
+  background-color: #474747;
+  border-radius: 6px;
+  padding: 3px;
+  margin-right: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  float: right;
+}
+
+#filter {
+  visibility: hidden;
+  display: inline;
+  transform: translate(0, -25%);
+  float: right;
+  margin-right: 100px;
+  padding: 10px;
+  border-radius: 6px;
+  background: #535353;
+  font-size: 15px;
+}
+
+#filter i {
+  font-size: 17.5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#filter button {
+  border: solid 2.25px rgb(35, 36, 44);
+  padding: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: #474747;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+#filter button:hover {
+  background: rgb(83, 83, 83);
+}
+
+#filter button#active{
+  background-color: #49484e;
+  border: solid rgb(193, 195, 199) 2.5px;
+}
+
+.grid-cell {
+  display: block;
+  height: fit-content;
+  text-align: center;
+}
+
+.grid-cell > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  color: white;
+}
+
+.displayTile {
+  position: relative;
+  height: 337.5px;
+  width: 225px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: auto;
+}
+
+.displayTile > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.like-button {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  opacity: 0;
+  border: 2px solid rgb(104, 104, 104);
+  border-radius: 5px;
+  transition: opacity .5s;
+}
+
+.save-button {
+  position: absolute;
+  top: 21%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  border: 2px solid rgb(104, 104, 104);
+  border-radius: 5px;
+  transition: opacity .5s;
+}
+
+.displayTile:hover .like-button, .displayTile:hover .save-button {
+  opacity: 1;
+}
+
+.like-button:hover, .save-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

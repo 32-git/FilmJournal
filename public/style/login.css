@@ -1,0 +1,125 @@
+html {
+    background: url("../img/login_background.jpg") no-repeat center fixed; 
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#login-container {
+    position: relative;
+    align-self: center;
+    text-align: center;
+    width: 600px;
+    height: 700px;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(41, 41, 41, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+input {
+    position: absolute;
+    width: 80%;
+    left: 7.5%;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    padding: 13px;
+    background: none;
+}
+
+input::placeholder {
+    font-size: 20px;
+    color: rgb(168, 168, 168);
+}
+
+input:focus { outline: none; }
+
+::-ms-reveal { filter: invert(); }
+
+h1 {
+    color: white;
+    font-weight: 700;
+    margin-top: 7.5%;
+}
+
+#logo {
+    width: 400px;
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    font-weight: 600;
+    left: 7.5%;
+}
+
+#title-username { top: 32%; } 
+
+#input-username{ top: 42%; }
+
+#title-password { top: 57%; }
+
+#input-password{ top: 67% }
+
+#error-text {
+    color: rgb(255, 60, 60);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@keyframes shake {
+    0% {
+      margin-left: 0rem;
+    }
+    25% {
+      margin-left: 0.5rem;
+    }
+    75% {
+      margin-left: -0.5rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
+}
+
+#error-text.appear {
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+#change-form {
+    color: white;
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a{
+    color: white;
+}
+
+button {
+    position: absolute;
+    right: 5%;
+    bottom: 6.5%;
+    width: 95px;
+    height: 40px;
+    color: white;
+    background-color: rgb(158, 0, 0);
+    border: none;
+    border-radius: 7px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+}

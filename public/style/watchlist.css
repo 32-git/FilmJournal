@@ -1,0 +1,209 @@
+body {
+  background: linear-gradient(rgb(54, 54, 54), rgb(0, 0, 0));
+  background-attachment: fixed;
+}
+
+/* sidebar styling */
+#sidebar {
+  display: flex;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 70px;
+  min-height: 100vh;
+  background: rgb(54, 54, 54);
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+#sidebar:hover {
+  width: 300px;
+  z-index: 1;
+}
+
+#sidebar ul {
+  position: relative;
+  height: 100vh;
+  padding: 0px;
+  width: 100%;
+}
+
+li { list-style: none; }
+
+li:hover { background-color: #535353; }
+
+li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+#logo {
+  position: relative;
+  display: flex;
+  height: 41px;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  min-height: 70px;
+  font-size: 1.5em;
+  color: #bdbdbd;
+  padding-left: 1.5px;
+}
+
+.text {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #bdbdbd;
+}
+
+#middle {
+  position: absolute;
+  top: calc((90% - 210px)/2);
+  width: 100%;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 2.5%;
+  border-top: 2px #535353 solid;
+  width: 100%;
+}
+/* ---------------------------------------------- */
+
+#grid-container {
+  display: block;
+  height: 100%;
+  width: 90%;
+  margin-right: 60px;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+
+#sort-button {
+  border: solid 7px #535353;
+  background-color: #474747;
+  border-radius: 6px;
+  padding: 3px;
+  margin-right: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17.5px;
+  font-weight: 400;
+  color: white;
+  float: right;
+}
+
+h1 {
+  font-family: "Architects Daughter";
+  color: white;
+  font-weight: 350;
+  font-size: 50px;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+h2{
+  position: relative;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32.5px;
+  margin-top: 30px;
+  width: fit-content;
+}
+
+#movie-wrapper, #series-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+.grid-cell {
+  display: block;
+  height: fit-content;
+  text-align: center;
+}
+
+.grid-cell > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  color: white;
+}
+
+.displayTile {
+  position: relative;
+  height: 337.5px;
+  width: 225px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: auto;
+}
+
+.displayTile > img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-filter: drop-shadow(10px 10px 10px #fff);
+ filter: drop-shadow(10px 10px 10px #fff); 
+}
+
+.like-button {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  opacity: 0;
+  border: 2px solid rgb(104, 104, 104);
+  border-radius: 5px;
+  transition: opacity .5s;
+}
+
+.save-button {
+  position: absolute;
+  top: 21%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  border: 2px solid rgb(104, 104, 104);
+  border-radius: 5px;
+  transition: opacity .5s;
+}
+
+.displayTile:hover .like-button, .displayTile:hover .save-button {
+  opacity: 1;
+}
+
+.like-button:hover, .save-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
