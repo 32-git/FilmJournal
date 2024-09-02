@@ -38,5 +38,5 @@ You can run the project by writing the command "npm run devStart" in cmd while i
 
 # Possible Future Additions
 
-  [] More recommended sections in the "Discover" tab
-  [] Option to delete your account
+  [x] More recommended sections in the "Discover" tab
+  [ ] Option to delete your account
